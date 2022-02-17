@@ -5,8 +5,13 @@
     </head>
 
     <body>
-        <h1 id="test-id">body text</h1>
+        <h1 id="test-id">Welcome to the Chatroom</h1>
+        <form id="chatbox-form">
+            <input type="text" id="text-box">Enter a message</input>
+            <button id="send-button">Send</button>
+        </form>
     </body>
 
+    <script type="text/javascript" src="/node_modules/socket.io/client-dist/socket.io.js"></script>
     <script type="text/javascript" src="/client/chat.js"></script>
 </html>
