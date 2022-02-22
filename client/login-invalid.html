@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chatroom</title>
+    </head>
+
+    <body>
+        <h1 id="login-title">Choose a username to enter the public chatroom</h1>
+        <br>
+        <h3>Login attempt failed: {REASON}</h3>
+        <br>
+        <form id="login-form" action="/" method="post">
+            <input type="text" id="username" name="username" autocomplete="off">Enter a username</input>
+            <button id="join-button">Join</button>
+        </form>
+    </body>
+
+    <script type="text/javascript" src="/client/waiting-room.js"></script>
+</html>
