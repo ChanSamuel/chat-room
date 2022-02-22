@@ -87,6 +87,7 @@ io.on('connection', socket => {
     // Configure a listener to this socket which listens for chat messages. 
     socket.on('message', msg => {
         console.log(username + ":\n" + msg);
+        socket.broadcast.emit('chat msg', username, msg);
     });
 
     // Configure a listener to this socket which listens for client disconnect.
