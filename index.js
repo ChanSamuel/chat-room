@@ -53,6 +53,18 @@ app.post('/', (req, res) => {
         return;
     }
 
+    // Reject too long usernames.
+    if (userName.length > 20) {
+        let reason = "Username cannot be longer than 20 characters.";
+        console.log(reason);
+
+        let data = fs.readFileSync(path.resolve(__dirname, "client/login-invalid.html"), "utf-8");
+        data = data.replace("{REASON}", reason);
+
+        res.send(data);
+        return;
+    }
+
     res.redirect("/home");
 })
 
